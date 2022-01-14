@@ -1,0 +1,348 @@
+/* pages/fenlei/fenlei.wxss */
+/* pages/menu/menu.wxss */
+@import '/iconf/icon.wxss';
+page{
+  height: 100%;
+ }
+ .menu-body{
+  /* border: 1px solid red; */
+  display: flex;
+  height: 100%;
+  border-top:1px solid #eee;
+ }
+ .menu-left{
+  width: 180rpx;
+  /* border:1px solid blue; */
+  height: 100%;
+  border-right: 1px solid #eee;
+  /* background-color: #eee; */
+ }
+ .menu-left view{
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  /* 文字 */
+  text-align: center;
+  line-height: 100rpx;
+  color: #666;
+  font-size: 28rpx;
+  opacity: 0.5;
+  display: inline-block;
+ }
+ .menu-left view.active{
+  color: #333999;
+  border-left: 8rpx solid #333999;
+  font-size:35rpx;
+  display: flex;
+  opacity: 1;
+}
+
+ .menu-right{
+  flex:1;
+  /* border:1px solid blue; */
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+ }
+
+ .menu-head image{
+  width: 100%;
+  height: 300rpx;
+  display: block;
+  /* border:1px solid red; */
+  
+ }
+ .menu-head .title{
+  color: #333999;
+  text-align: center;
+  line-height: 100rpx;
+  /* border:1px solid red; */
+ }
+ .pro-in{
+   width: 100%;
+  display: flex;
+  border-bottom: 5rpx solid #eee;
+  /* border:1px solid blue; */
+  /* height: 200rpx; */
+  position: relative;
+ }
+
+.pro-in image{
+  height: 180rpx;
+  margin: 20rpx;
+  width: 180rpx;
+  /* border:1px solid blue; */
+
+}
+.pro-in text{
+  color: #333;
+  font-size: 27rpx;
+  margin: 22rpx 0 0 15rpx;
+}
+
+
+
+/* 加减号的选择 */
+
+
+.add{
+  width: 30rpx;
+  height: 40rpx;
+  right: 50rpx;
+  top: 25rpx;
+ /* border:1rpx solid red; */
+ display: block;
+ position: absolute;
+}
+
+.decrease{
+ height: 20rpx;
+ width:40rpx;
+ top: 25rpx;
+ display: block;
+ position: absolute;
+}
+.control{
+  height: 200rpx;
+  width: 240rpx;
+  right:0rpx;
+  bottom: 30rpx;
+  top:135rpx;
+  /* border:1rpx red solid; */
+  display: flex;
+  position: absolute;
+  text-align: center; 
+}
+.in-right .title{
+  display: block;
+  position: relative;
+} 
+
+.control .number{
+  width: 100rpx;
+  margin-left: 60rpx;
+  margin-top:10rpx;
+ margin-bottom: 80rpx;
+ /* left: 800rpx; */
+/* border: 1px solid blue; */
+ font-size: 50rpx;
+ color: red;
+}
+.number text{
+  display: block;
+  width: 687.5rpx;
+  text-align: center;
+  border: 1px solid blue;
+  font-size: 300rpx;
+  color: #fcf;
+}
+.qq{
+  position: absolute;
+  bottom: 20rpx;
+  left: 240rpx;
+  height: 40rpx;
+  /* color: burlywood; */
+}
+/* 购物车的控制 */
+.car{
+  position: absolute;
+  bottom: 0rpx;
+  background:#fff;
+  width: 100%;
+  height: 100rpx;
+  right: 0;
+  display: flex;
+  z-index: 999;
+}
+
+.money{
+  /* height: 80%; */
+  /* margin-top: 10rpx; */
+  bottom: 0;
+  /* height: 100%; */
+  /* width: 200rpx; */
+  color: red;
+  /* border:1rpx solid red; */
+  position: absolute;
+  left: 140rpx;
+  font-size: 70rpx;
+}
+.che{
+/* margin: 100rpx; */
+left: 0;
+margin-left: 1rpx;
+margin-bottom: 1rpx;
+position: relative;
+}
+.che image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.icon1::before{
+  content: '\e64f';
+  font-size: 30rpx;
+  /* color:#7777; */
+}
+.icon2::before{
+  content: '\e6cd';
+  /* color:#7777; */
+}
+
+.icon3::before{
+  content: '\e600';
+  font-size: 100rpx;
+  /* background-color: red; */
+  /* border: 1px solid red; */
+  /* color:#7777; */
+}
+.icon4::before{
+  content: '\e60c';
+  /* color:#7777; */
+ 
+}
+.icon5::before{
+  content: '\e601';
+  /* color:#7777; */
+}
+.bottom-btn .r {
+  border: 1px solid #b4282d;
+  background: #b4282d;
+  float: left;
+  height: 100rpx;
+  line-height: 96rpx;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+.bottom-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 300rpx;
+  height: 100rpx;
+  display: flex;
+  background: #fff;
+}
+
+
+
+/* 呈现购物车的属性 */
+.list{
+  /* border:2rpx black solid; */
+  width:100%;
+  height: 30%;
+  position: absolute;
+ 
+  
+  bottom: 85rpx;
+  background: #fff;
+}
+.list-header{
+  display: flex;
+  justify-content: space-between;
+  background: #eee;
+}
+.showSelect{
+  /* border:1rpx black solid; */
+  height: 100%;
+  
+  
+}
+
+
+.oneData{
+  
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  
+}
+
+
+
+
+  .prices{
+    position: absolute;
+    /* margin: 0 50%; */
+    margin-left: 360rpx;
+    /* left: auto; */
+    color:#999;
+  }
+
+
+.oneData .name{
+  display: block;
+  height: 100%;
+  width: 250rpx;
+  
+}
+
+.control1{
+  width: 170rpx;
+  display: flex;
+  /* border:red solid 1rpx; */
+  text-align: center;
+
+  
+}
+/* 该淘汰加减号，使用小图标了 */
+.add{
+  width: 30rpx;
+  height: 40rpx;
+  right: 50rpx;
+  line-height:40rpx ;
+
+
+}
+.control1 .add{
+  width: 30rpx;
+  height: 40rpx;
+  top:6rpx;
+  right: 15rpx;
+ /* border:1rpx solid red; */
+ display: block;
+}
+.decrease{
+ /* border:1rpx solid red; */
+ height: 40rpx;
+ width:40rpx;
+ line-height: 40rpx;
+
+}
+
+.control1 .decrease{
+  /* border:1rpx solid red; */
+  height: 40rpx;
+  width:40rpx;
+  top:4rpx;
+  display: block;
+ }
+
+
+ .control1 .number{
+   right: 80rpx;
+   top: 7rpx;
+   position: absolute;
+ }
+ 
+
+/* 设置退出检测 */
+.exitShow{
+  /* border:1rpx ; */
+  width: 100%;
+  height: 60%;
+  z-index: 997;
+  position: absolute;
+  top:0;
+  background:#eee;
+  opacity: 0.2;
+
+
+}
+
+.list{
+  z-index: 998;
+}

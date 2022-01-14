@@ -1,0 +1,44 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <view class="mycart" wx:if="{{hascartList}}">
+    <view class="cartBox">
+      <view class="cartBox-t">
+        <view class="cartlist" wx:for="{{cartList}}" wx:key="{{index}}">
+          <view class="selected" wx:if="{{item.selected}}" data-index="{{index}}" bindtap="selectedList"></view>
+          <view class="circle" wx:else data-index="{{index}}" bindtap="selectedList"></view>
+          <image src="{{item.image}}"></image>
+          <view class="cartlist_in">
+            <view class="goods">
+              <text>{{item.title}}</text>
+              <text>¥{{item.price}}</text>
+            </view>
+            <view class="goodsnum">
+              <view>
+                <text class="jian" bindtap="jian" data-index="{{index}}">-</text>
+                <text class="goodsNum">{{item.num}}</text>
+                <text class="jia" bindtap="jia" data-index="{{index}}">+</text>
+              </view>
+              <text class="del" bindtap="delList" data-index="{{index}}">×</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="cartBox-b">
+        <view>
+          <view class="selected" wx:if="{{selectAll}}" data-index="{{index}}" bindtap="selectedAll"></view>
+          <view class="circle" wx:else data-index="{{index}}" bindtap="selectedAll"></view>
+          <view data-index="{{index}}" bindtap="selectedAll">全选</view>
+        </view>
+        <view>
+          <view>¥{{totalPrice}}</view>
+          <navigator url="">
+            <!-- <image src="/image/getin.png"></image> -->
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="nothing" wx:else>
+    <view>购物车是空的哦</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+ 
+    <view class="order-total">
+        <view class="l">实付：￥{{talTalCount}}</view>
+        <view class="r" bindtap="submitOrder">去付款</view>
+    </view>
+</view>

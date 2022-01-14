@@ -1,0 +1,71 @@
+<view class="menu-body">
+  <scroll-view class="menu-left" scroll-y>
+    <view wx:for="{{type}}" class="{{index==cIndex?'active':''}}" bindtap="showMenu" data-index="{{index}}">
+      {{item.text}}</view>
+  </scroll-view>
+  <scroll-view class="menu-right" scroll-y scroll-into-view="{{scrollindex}}" enhanced="true" bindscroll="scroll"
+    bindscrolltoupper="scrolltop" data-index="{{index}}">
+    <view class="havepro" wx:for="{{data1}}" id="{{data1[index].dishTypeRelateId}}">
+      <view class="pro-in">
+        <!-- <view class="pro-in"> -->
+        <image src="{{data1[index].imagePathSmall}}" bindtap="event2" data-index="{{index}}"></image>
+        <text>{{data1[index].dishName}}</text>
+        <view class="qq">
+          {{data1[index].standardList[0].dishPrice}}元
+        </view>
+        <view class="control">
+          <view class="decrease" bindtap="decrease" data-id="{{index}}" wx:if="{{data1[index].startNum>1}}">
+            <text class="iconfont icon1"></text>
+          </view>
+          <text class="number" wx:if="{{data1[index].startNum>1}}">{{data1[index].startNum-1}}</text>
+          <view class="add" id="{{index}}" bindtap="addcart1" data-id="{{id}}">
+            <text class="iconfont icon2"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <!-- 购物详情弹出 -->
+  <view class="list" wx:if="{{listShow}}">
+    <view class="list-header">
+      <view class="title">已选商品</view>
+      <text class="empty" bindtap="empty">清空</text>
+    </view>
+
+    <scroll-view class="showSelect" wx:if="{{listShow}}" scroll-y="true">
+      <view class="oneData" wx:for="{{array1}}" wx:if="{{item.number>0}}">
+        <view class="name">{{item.name}}</view>
+        <view class="prices">￥{{item.price*item.number}}</view>
+        <view class="control1">
+          <view class="decrease" bindtap="decrease1" data-index="{{index}}">
+            <text class="iconfont icon5"></text>
+          </view>
+          <text class="number">{{item.number}}</text>
+          <view class="add" bindtap="addcart2" data-index="{{index}}">
+            <text class="iconfont icon4"></text>
+          </view>
+        </view>
+      </view>
+
+    </scroll-view>
+
+  </view>
+
+  <view class="exitShow" wx:if="{{listShow}}" bindtap="exitShow"></view>
+
+
+  <view class="car" wx:if="{{totalCount!=0}}" bindtap="showCarList">
+    <view class="che">
+      <!-- <text class="iconfont icon3"></text> -->
+      <image src="/image/home/buy0.png"></image>
+    </view>
+    <view class="money">¥{{totalCount}}</view>
+
+
+    <view class="bottom-btn">
+      <view class="r">提交订单</view>
+    </view>
+  </view>
+</view>

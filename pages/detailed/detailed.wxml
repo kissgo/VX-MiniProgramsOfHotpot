@@ -1,0 +1,40 @@
+<!--pages/detailed/detailed.wxml-->
+<!--pages/detailed/detailed.wxml-->
+<view  data-index1="{{titlenn}}">
+	<image src="{{titlen.imagePathSmall}}"></image>
+	<view class="a">{{titlen.dishName}}</view>
+	<view class="k">吃法：{{titlen.introduction}}</view>
+	<view  class="o">{{titlen.standardList[0].dishPrice}}元</view>
+		<!-- <view>{{titlen.standardList}}</view>
+		<view wx:if="{{}}"></view>{{titlen.standardList[dishPrice]}}</view> -->
+	</view>
+	<picker mode="selector" range="{{arr}}" value="0" bindchange="change1" >
+<view class="picker">
+      请选择：{{arr[index-1]}}  份
+	</view>
+	</picker>
+	<view class="number-item">
+        <view class="name">数量</view>
+        <view class="selnum">
+          <view class="cut" bindtap="cutNumber">-</view>
+          <input value="{{index}}" class="number" disabled="true" type="number" />
+          <view class="add" bindtap="addNumber">+</view>
+        </view>
+      </view>
+	<view class="bottom-btn">
+  <view class="l l-collect" bindtap="addCannelCollect">
+		<text class="iconfont icon2"></text>
+	</view>
+	<block wx:if="{{cartGoodsCount>0}}">
+      <text class="cart-count">{{index}}</text>
+    </block>
+  <view class="l l-cart">
+    <view class="box" bindtap="swtich">
+      <text class="cart-count">{{index}}</text>
+			<text class="iconfont icon3"></text>
+    </view>
+  </view>
+  <view class="c">立即购买</view> 
+  <view class="r" bindtap="addTo" >加入购物车</view>
+</view>
+

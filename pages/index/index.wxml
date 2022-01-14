@@ -1,0 +1,38 @@
+<view class="index-body">
+
+  <view>
+    <image src="/image/home/top.jpg"></image>
+  </view>
+  <view class="fun">
+    <view bindtap="event1">
+      <image src="/image/home/1.png"></image>
+      <text class="title"> 自助点单</text>
+      <text class="introduce">免排队下单</text>
+    </view>
+    <view bindtap="event2">
+      <image src="/image/home/2.png"></image>
+      <text class="title"> 优惠券</text>
+      <text class="introduce">我的优惠券</text>
+    </view>
+    <view>
+      <image src="/image/home/3.png"></image>
+      <text class="title">团餐</text>
+      <text class="introduce">聚会首选</text>
+    </view>
+  </view>
+  <view class="ing">
+    <swiper indicator-active-color="#333999" autoplay interval="2000" circular bindchange="event0"
+      data-index="{{index}}">
+      <swiper-item wx:for="{{png}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="dot">
+      <view wx:for="{{png}}" wx:key="index" class="{{index==Index?'active':''}}"></view>
+    </view>
+  </view>
+
+  <view class="aaa" bindtap="event3" >
+    <image src="/image/home/31.png"></image>
+  </view>
+</view>

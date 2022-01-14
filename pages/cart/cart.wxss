@@ -1,0 +1,94 @@
+/* pages/cart/cart.wxss */
+page{
+  background: #fff;
+}
+.cartBox{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.cartlist{
+  height: 200rpx;
+  padding: 16rpx;
+  border:1px solid #f0f0f0;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.circle{
+  height: 46rpx;
+  width: 46rpx;
+  border: 1px solid #ccc;
+  border-radius:50%;
+}
+.selected{
+  width: 50rpx;
+  height: 50rpx;
+  background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-checked-822e54472a.png) no-repeat;
+background-size: 50rpx;
+
+}
+.cartlist image{
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #f0f0f0;
+  margin: 0 20rpx;
+}
+.cartlist .cartlist_in{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cartlist .cartlist_in view{
+    height: 90rpx;
+    width: 100%;
+    line-height: 90rpx;
+}
+.cartlist .cartlist_in .goods{
+  display: flex;
+  justify-content: space-between;
+}
+.cartlist .cartlist_in .goodsnum{
+  display: flex;
+  justify-content: space-between;
+}
+.cartlist .cartlist_in .goodsnum view:nth-child(1){
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.cartlist .cartlist_in .goodsnum text{
+  width: 50rpx;
+  font-weight: bold;
+  /* height: 50rpx; */
+  /* border: 1px solid #f0f0f0; */
+}
+
+.cartBox-b{
+  display: flex;
+  justify-content: space-between;
+  padding:2%;
+  height: 80rpx;
+  align-items: center;
+  position:fixed;
+  bottom:0;
+  left: 0;
+  width: 96%;
+  background: #333;
+  color: #fff;
+}
+.cartBox-b view{
+  display: flex;
+}
+.cartBox-b view view{
+  margin-left:20rpx; 
+}
+.cartBox-b view image{
+  margin-left:20rpx;
+}
+.cartBox-b image{
+  width: 50rpx;
+  height: 50rpx;
+}
